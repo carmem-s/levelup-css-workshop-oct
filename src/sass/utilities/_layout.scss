@@ -1,12 +1,34 @@
 .container {
-  width: 80ch;
-  max-width: 95vw;
-  margin-right: auto;
-  margin-left: auto;
+  --container-width: 80ch;
+
+  width: min(var(--container-width), 100vw - 3rem);
+  margin-inline: auto;
 }
 
 .layout-flex {
+  --gap: 2rem;
+  --wrap: wrap;
+
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-wrap: var(--wrap);
+  gap: var(--gap);
+}
+
+.section,
+section {
+  margin-block: 8vh;
+}
+
+.section-padded {
+  padding-block: 8vh;
+}
+
+.inclusively-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
 }

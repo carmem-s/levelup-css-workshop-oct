@@ -1,0 +1,64 @@
+---
+title: Forms
+---
+
+<form>
+
+  <div class="form-group">
+    <label for="text-input">Text input</label>
+    <input class="form-field" type="text" id="text-input" name="text-input" />
+  </div>
+
+  <div class="form-group form-error">
+    <label for="text-input-error">Text input with error</label>
+    <input class="form-field" type="text" id="text-input-error" name="text-input-error" aria-describedby="text-input-error-msg" />
+    <small id="text-input-error-msg" class="form-error-text">This field has an error</small>
+  </div>
+
+  <div class="form-group">
+    <label for="textarea">Textarea</label>
+    <textarea class="form-field" id="textarea" name="textarea"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="standard-select">Standard Select</label>
+    <div class="form-field select">
+      <select id="standard-select" name="standard-select">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+        <option value="Option 4">Option 4</option>
+        <option value="Option 5">Option 5</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control">
+      <input type="checkbox" name="checkbox" />
+      Checkbox
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control">
+      <input type="checkbox" name="checked" checked />
+      Checkbox - checked
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control">
+      <input type="radio" name="radio" />
+      Radio
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control">
+      <input type="radio" name="radio" checked />
+      Radio - checked
+    </label>
+  </div>
+
+</form>

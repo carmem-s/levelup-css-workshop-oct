@@ -1,0 +1,80 @@
+$card-gutter: "1.5rem" !default;
+
+$card-gutter-var: "var(--card-gutter, #{$card-gutter})";
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--card-gap, 1rem);
+  border-radius: var(--card-radius, 0.25rem);
+  background-color: var(--card-background, #fff);
+  box-shadow: 0 0.25rem 0.45rem -0.15rem rgba(0, 0, 0, 0.5);
+
+  > * {
+    margin-block-start: 0;
+  }
+
+  > :is(h1, h2, h3, h4) {
+    margin-block-end: 0;
+
+    a {
+      --outline-offset: 0.15em;
+      
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  > :is(h1, h2, h3, h4) a,
+  > .button {
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  > *:not(img) {
+    margin-inline: #{$card-gutter-var};
+  }
+
+  > :first-child:not(img) {
+    margin-block-start: #{$card-gutter-var};
+  }
+
+  > img:first-child {
+    border-radius: var(--card-radius, 0.25rem) var(--card-radius, 0.25rem) 0 0;
+  }
+
+  > :last-child:not(img) {
+    margin-block-end: #{$card-gutter-var};
+  }
+
+  > img:last-child {
+    border-radius: 0 0 var(--card-radius, 0.25rem) var(--card-radius, 0.25rem);
+  }
+
+  > :is(.button, ul, a):last-child {
+    margin-block-start: auto;
+  }
+
+  > .layout-flex {
+    --gap: 1rem;
+  }
+
+  .form-group {
+    --form-field-width: 100%;
+
+    align-self: stretch;
+
+    + .form-group {
+      margin-top: 0;
+    }
+
+  }
+}

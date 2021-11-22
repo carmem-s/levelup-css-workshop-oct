@@ -1,10 +1,7 @@
 @use "reset";
+@use "fonts";
 @use "theme";
-@use "utilities/color";
-@use "utilities/layout";
-@use "utilities/grid";
+@use "global"; // with ($type-scale: "goldenRatio");
+@use "components";
+@use "utilities";
 @use "templates";
-
-body {
-  background-color: var(--color-background);
-}

@@ -1,3 +1,9 @@
+.template-landing-page {
+  .container {
+    --container-width: 100ch;
+  }
+}
+
 .template-dashboard {
   display: grid;
   grid-template-areas: 
@@ -124,7 +130,7 @@
 
   article {
     display: grid;
-    row-gap: 1rem;
+    // row-gap: 1rem;
     grid-template-columns:
       [main-start]
       1fr
@@ -139,6 +145,8 @@
     }
 
     img {
+      --image-max-height: 60vh;
+
       grid-column: main;
       justify-self: center;
       margin-top: 4vh;
